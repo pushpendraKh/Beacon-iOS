@@ -1,0 +1,4 @@
+[submodule "Beacon"]
+	path = Beacon
+	url = https://github.com/pushpendraKh/Beacon
+	branch = master
