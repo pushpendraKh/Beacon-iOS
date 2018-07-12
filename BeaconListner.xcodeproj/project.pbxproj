@@ -24,6 +24,7 @@
 		C09A992320F652D40088A274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C09A992520F652D40088A274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C09A992C20F653080088A274 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C09A993420F74D4B0088A274 /* BeaconListner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeaconListner.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		C09A991820F652D30088A274 /* BeaconListner */ = {
 			isa = PBXGroup;
 			children = (
+				C09A993420F74D4B0088A274 /* BeaconListner.entitlements */,
 				C09A991920F652D30088A274 /* AppDelegate.swift */,
 				C09A991B20F652D30088A274 /* ViewController.swift */,
 				C09A991D20F652D30088A274 /* Main.storyboard */,
@@ -108,6 +110,11 @@
 				TargetAttributes = {
 					C09A991520F652D30088A274 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -293,7 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K87EX9F6VD;
+				DEVELOPMENT_TEAM = ACT2M87F6J;
 				INFOPLIST_FILE = BeaconListner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K87EX9F6VD;
+				DEVELOPMENT_TEAM = ACT2M87F6J;
 				INFOPLIST_FILE = BeaconListner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
