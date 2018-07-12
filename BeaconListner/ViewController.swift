@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     var locationManager: CLLocationManager!
     var beaconRegion: CLBeaconRegion!
+    var backgroundTaskIdentifier: UIBackgroundTaskIdentifier?
+
     
     private let uuid = UUID.init(uuidString: "9CD99728-41E9-4723-8A7B-75F379FA5555")
     private var pastDistance: CLProximity = .unknown
@@ -25,6 +27,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+            UIApplication.shared.endBackgroundTask(self.backgroundTaskIdentifier!)
+        })
         setUpLocationManager()
         setupBeaconSettings()
     }
