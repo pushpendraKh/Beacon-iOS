@@ -32,9 +32,10 @@ class ViewController: UIViewController {
     private func setUpLocationManager() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
     }
-
     
     private func setupBeaconSettings() {
         beaconRegion = CLBeaconRegion.init(proximityUUID: uuid!, identifier: "estimode-pushpendra")
@@ -79,12 +80,15 @@ extension ViewController: CLLocationManagerDelegate {
         case .immediate:
             self.companyName.text = "immediate"
             content.body = "Hey, There is one beacon immediate you"
+            print("Hey, There is one beacon immediate you")
         case .near:
             self.companyName.text = "near"
             content.body = "Hey, There is one beacon near you"
+            print("Hey, There is one beacon near you")
         case .far:
             self.companyName.text = "far"
             content.body = "Hey, There is one beacon far from you"
+            print("Hey, There is one beacon far you")
         case .unknown:
             self.companyName.text = "unknown"
             content.body = "Beacon is shut"
